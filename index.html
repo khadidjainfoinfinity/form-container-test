@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="form-container">
+        <div style="position: absolute; width: 100%; height: 100%; display: flex; justify-content: flex-start; align-items: center; flex-flow: column nowrap; gap: 7vw;">
+            <img src="ascii-art_1-removebg-preview 2.png" alt=".." style="  width: 100%; height: auto; ">
+        <img src="ascii-art_1-removebg-preview 2.png" alt="..." style="  width: 100%; height: auto; ">
+        </div>
+        
+        <div class="circul"> <div class="back"></div></div>
+        <div class="circulartext">
+            <div class="text">
+                <h3> Discover Now - Discover Now - Discover Now-</h3>
+            </div>
+        </div>
+        <div class="intro">
+            <div class="content">
+                <h1 class="font" id="typed3"></h1>
+                <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, possimus voluptatum. Delectus nostrum veritatis rerum ipsam saepe, corporis amet deserunt? Accusantium quos fugiat reiciendis </p>
+            </div>
+            <div class="images">
+                
+                <img src="Fichier 3 2.png" alt="images" class="img1">
+                <img src="Fichier 3 2.png" alt="images" class="img2">
+                <img src="Fichier 3 2.png" alt="images" class="img3">
+                <img src="Fichier 3 2.png" alt="images" class="img4">
+                <img src="Fichier 3 2.png" alt="images" class="img5">
+                <img src="Fichier 3 2.png" alt="images" class="img6">
+                <img src="Fichier 3 2.png" alt="images" class="img7">
+                <img src="2.svg" alt="pin" class="pin1">
+                <img src="2.svg" alt="pin" class="pin2">
+                <img src="3.svg" alt="pin" class="pin3">
+            </div>
+            <div class="carousel"> 
+                <div class="slider">
+                    <div class="slide-track">
+                        <div class="slide">
+                            <img src="Fichier 3 2.png" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="Fichier 3 2.png" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="Fichier 3 2.png" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="Fichier 3 2.png" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="Fichier 3 2.png" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="Fichier 3 2.png" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="Fichier 3 2.png" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="Fichier 3 2.png" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="Fichier 3 2.png" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="Fichier 3 2.png" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="Fichier 3 2.png" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="Fichier 3 2.png" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="Fichier 3 2.png" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="Fichier 3 2.png" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="Fichier 3 2.png" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="Fichier 3 2.png" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="Fichier 3 2.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="arrow-box" style="position: relative;"><img src="Group 13939.svg" alt="" class="arrow" > </div> 
+        <h1 id="typed2" class="font" style="margin-top: 3vw;"></h1>
+    </section>
+    <div class="background"></div>
+
+    <script>
+const viewportObserver = new IntersectionObserver((entries, observer) => {
+  if (entries[0].isIntersecting) {
+    var typed3 = new Typed('#typed3', {
+      strings: ['{ what is this ?}'],
+      typeSpeed: 80,
+      backSpeed: 0,
+      fadeOut: true,
+      showCursor: true,
+
+      cursorChar: " ",
+    });
+observer.unobserve(document.querySelector('#typed3'))
+  }
+})
+
+
+viewportObserver.observe(document.querySelector('#typed3'));
+
+const text = document.querySelector('.text h3');
+text.innerHTML = text.innerText.split('').map(
+    (char , i) =>
+    `<span style="transform:rotate(${i * 8.3}deg)">${char}</span>`
+).join('');
+    </script>
+
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</body>
+</html>

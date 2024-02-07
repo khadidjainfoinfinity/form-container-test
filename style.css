@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: #15141D;
+    font-family: 'Fira Code', monospace;
+    width: 100%;
+    height: 100%;
+    background-size: 110%;
+    z-index: -1;
+}
+
+section.form-container{
+    height: 3000px;
+    margin: 80vh 0;
+    width: 90vw;
+    min-height: 1000px;
+    position: relative;
+    background-image: linear-gradient(  #1D1C29, rgba(29, 28, 41, .3));
+    border-radius: 3rem;
+   
+}
+
+.form-container .circul{
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    background-color: #15141D;
+    position: absolute;
+    top: -10vw;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: visible;
+}
+
+
+.form-container .circul .back{
+    min-width: 23.3vw;
+    height: 3vw;
+    background-color: #15141D;
+    
+}
+
+.form-container .circul::before,
+.circul::after{
+    content: "";
+    width: 2vw;
+    height: 2vw;
+    background-color: #1D1C29;
+    position: absolute;
+}
+
+.circul::after{
+    top: 10vw;
+    left: -1.8vw;
+    border-top-right-radius: 4vw;
+}
+
+.circul::before{
+    top: 10vw;
+    right: -1.8vw;
+    border-top-left-radius: 4vw;
+}
+
+
+
+ .form-container .font{
+    margin: 18% 0 .7em;
+    font-size: 3rem;
+    color: #F5AC26;
+    text-align: center;
+}
+
+.intro .content p{
+    letter-spacing: 1px;
+    line-height: 1.9;
+    text-transform: capitalize;
+    width: 76vw;
+    text-align: center;
+    margin-left: 50%;
+    transform: translate(-50%);
+    color: #fff;
+    font-size: 1rem;
+}
+
+.form-container .intro .images{
+    margin: 50px 50% 0 ;
+    transform: translate(-50%);
+    width: 85%;
+    padding: 1em 2em 0;
+    position: relative;
+    min-height: 50vw;
+}
+
+
+
+.images img{
+    position: absolute;
+}
+
+
+img.img1{
+    top: 0;
+    right: 4%;
+    width: 22%;
+    transform: rotate(10deg);
+}
+
+img.img2{
+    top: 0;
+    right: 6%;
+    transform: translate(-50%);
+    width: 36%;
+}
+
+img.img4{
+    top: 35%;
+    right: 0;
+    width: 28%;
+    transform: rotate(-8deg);
+}
+
+img.img3{
+    top: 48%;
+    right: 25%;
+    width: 26%;
+    transform: rotate(10deg);
+}
+
+img.img5{
+    top: 50%;
+    left: 28%;
+    width: 25%;
+    transform: rotate(5deg);
+}
+
+img.img7{
+    top: 50%;
+    left: 2%;
+    width: 28%;
+    transform: rotate(15deg);
+}
+
+img.img6{
+    width: 38%;
+    transform: rotate(15deg);
+}
+
+
+img.pin2{
+    right: 2%;
+    top: 25%;
+    width: 8%;
+}
+
+img.pin3{
+    left: 46%;
+    top: 45%;
+    width: 8%;
+}
+
+img.pin1{
+    width: 8%;
+}
+
+
+.arrow{
+    width: 6vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.carousel{
+    display: none;
+	align-items: center;
+	height: auto;
+	justify-content: center;
+}
+
+/*-----------------------------------------------------------add the phone screen omba3d*/
+@media (max-width: 600px){
+    .carousel{
+        display: flex;
+    }
+    .form-container .intro .images{
+        display: none;
+    }
+}
+
+
+
+
+@keyframes scroll {
+	0% { 
+        transform: translateX(0);
+     }
+	100% { 
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+
+.slider {
+	height: fit-content;
+	margin: 60px 0 0;
+	overflow:hidden;
+	position: relative;
+	width: 100vw;
+
+	
+	&::before,
+	&::after {
+		content: "";
+        background: linear-gradient(to right, rgba(29,28,41,1) 20%, rgba(29,28,41,0) 100%);
+		height: 100%;
+		position: absolute;
+		width: 3vw;
+		z-index: 2;
+	}
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	.slide-track {
+		animation: scroll 30s linear infinite;
+		display: flex;
+        background: #1D1C29 ; 
+		width: calc(250px * 14);
+	}
+	
+
+
+    .slide img{
+        width: 180px;
+        height: auto;
+    }
+}
+
+
+
+@media (max-width: 1100px) {
+    .form-container .font{
+        font-size: 2.5rem;
+    }
+    .content p{
+        font-size: 1rem;
+    }
+
+  }
+
+
+
+  @media (max-width: 1030px) {
+    .form-container .font{
+        font-size: 2rem;
+    }
+    .content p{
+        font-size: .8rem;
+    }
+  }
+
+  
+  @media (max-width: 850px) {
+    section.form-container{
+        border-radius: 2rem;
+    }
+    .form-container .font{
+        font-size: 1.8rem;
+    }  
+  }
+
+
+  @media (max-width: 650px) {
+    section.form-container{
+        border-radius: 1.6rem;
+    }
+    .form-container .font{
+        font-size: 1.6rem;
+    }  
+  }
+
+
+  @media (max-width: 580px) {
+    .intro .content p{
+        font-size: smaller;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .form-container .font{
+        font-size: 1.4rem;
+    }  
+
+    .form-container{
+        width: 100vw;
+    }
+  }
+
+  @media (max-width: 440px) {
+    .form-container .font{
+        font-size: 1.3rem;
+    } 
+
+    .intro .content p{
+        font-size: small;
+    }
+
+    .slide img{
+        transform: scale(.94);
+    }
+  }
+
+
+  @media (max-width: 400px) {
+    .form-container .font{
+        font-size: 1.1rem;
+    } 
+
+    .slide img{
+        transform: scale(.92);
+    }
+  }
+
+
+  .circulartext{
+    position : absolute;
+    top: -8vw;
+    width: 16vw;
+    height: 16vw;
+    border-radius: 50%;
+    background: linear-gradient( #1D1C29, #1D1C29) padding-box,
+    linear-gradient(to top, #fff0, #fff7) border-box;
+border-radius: 50em;
+border: .5vw solid transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circulartext .text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: rotat 15s linear infinite;
+    z-index: 555;
+  }
+
+
+  .text span{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2.5%;
+    font-size: 1.2em;
+    transform-origin: 0 7.3vw;
+}
+  
+
+  .text h3{
+    font-size: 1.2vw;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  @keyframes rotat{
+    100%{
+        transform: rotate(360deg);
+    }
+  }
+
+  .circulartext::before{
+    content: "";
+    position: absolute;
+    background:transparent;
+    width: 0;
+	height: 0;
+	border-left: 2.5vw solid transparent;
+	border-right: 2.5vw solid transparent;
+	border-top: 3.5vw solid hsl(197, 100%, 89%);
+    border-radius: .3vw;
+  }
+
+ 
